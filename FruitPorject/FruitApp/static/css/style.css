@@ -1,0 +1,46 @@
+
+
+table{
+    border-collapse: collapse;
+    width: 40%;
+}
+th{
+    height: 50px;
+    text-align: left;
+    background-color: gray;
+}
+th, td{
+    padding: 5px
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+table, th, td{
+    border: 1px solid black;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+label {
+    display: inline-block;
+    width: 265px;
+}
+button{
+    background-color: green;
+    margin-left: 328px;
+}
+form{
+    width: 550px;
+}
+section{
+    width: 280px;
+    border: 2px solid black;
+    padding: 5px;
+    background-color: blueviolet;
+
+}
+#container{
+    display: flex ;
+}

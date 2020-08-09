@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dojo Fruit Store checkout!</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    </head>
+ 
+    <body>
+        <h1>Thank you for your order!</h1>
+            {% csrf_token %}
+        <p>We order {{Total_num}} items for you and charged your student acoount on {{time}}</p>
+            <h2>You've ordered</h2>
+            <table>
+                <tr>
+                    <th>Fruit Name</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td>Strawberry</td>
+                    <td>{{count1}}</td>
+                </tr>
+                <tr>
+                    <td>Raspberry</td>
+                    <td>{{count2}}</td>
+                </tr>
+                <tr>
+                    <td>Apple</td>
+                    <td>{{count3}}</td>
+                </tr>
+            </table>
+            <h2>Your Information</h2>
+            <lable for="Name">Name:{{name}}</lable><br>
+            <lable for="ID">Your Student ID:{{id}}</lable><br>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dojo Fruit Store!</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+ 
+    <body>
+        <h1>Dojo Fruit Store!</h1>
+        <div id="container">
+            <form action='/checkout' method='post'>
+                {% csrf_token %}
+               
+                <h2>What would you like to buy?</h2>
+                <table>
+                    <tr>
+                        <th>Fruit Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>Strawberry</td>
+                        <td>
+                            <select name="Strawberry_count">
+                                {% for i in '0123456789'|make_list %}
+                                <option value="{{i}}">{{i}}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Raspberry</td>
+                        <td>
+                            <select name="Raspberry_count">
+                                {% for i in '0123456789'|make_list %}
+                                <option value="{{i}}">{{i}}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>
+                            <select name="Apple_count">
+                                {% for i in '0123456789'|make_list %}
+                                <option value="{{i}}">{{i}}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <h2>Your Information</h2>
+                <label for="Name">Name:</label><input type='text' name='name'><br>
+                <label for="ID">Your Student ID:</label><input type='text' name='id'><br>
+    
+                <button type='submit'>Buy me stuff</button>
+            </form>
+            <section>
+                <h3>Welcome to Dojo Fruit Store!</h3>
+                <p>Your dojo decided to buy fruits for all the students! Please use this app to tell us what you would like to have! 
+                    Once we get your order, we'll charge your student account automatically.
+                </p>
+                <p>Dojo Fruit Store is proudly built using Flosk.</p>
+            </section>
+        </div>
+        
+    </body>
+</html>
